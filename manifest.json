@@ -3,15 +3,22 @@
   "name": "EasyMusic",
   "version": "0.0.1",
   "description": "A chrome extension that makes it possible to listen to songs just by their title.",
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
   "permissions": [
-    "contextMenus"
+    "contextMenus",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"]
+    }
   ],
   "background": {
-	"service_worker": "src/background.js"
-  },
-  "action": {
-    "default_popup": "src/popup.html",
-    "default_title": "template"
+    "service_worker": "src/background.js"
   },
   "icons": {
     "16": "assets/icon.png",
