@@ -1,12 +1,8 @@
 {
   "manifest_version": 3,
   "name": "EasyMusic",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A chrome extension that makes it possible to listen to songs just by their title.",
-  "host_permissions": [
-    "https://*/*",
-    "http://*/*"
-  ],
   "permissions": [
     "contextMenus",
     "tabs"
