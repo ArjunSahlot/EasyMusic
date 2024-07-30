@@ -17,8 +17,6 @@ function makeDraggable(element) {
     document.onmouseup = disableDrag;
     document.onmousemove = dragElement;
 
-    window.addEventListener("mousemove", dragElement);
-
     mouseOffsetX = getMouseOffset().X;
     mouseOffsetY = getMouseOffset().Y;
   }
